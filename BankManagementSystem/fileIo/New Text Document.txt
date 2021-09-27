@@ -1,0 +1,15 @@
+	private File file; // for creating file
+	private FileWriter Writer; // write 
+	private FileReader reader;// reading file 
+	private BufferedReader bfr;// read file content
+	
+	public void WriteInFile(String s)
+	{
+		//Making new file and write over it can cause checkedd exception so we will use haldler
+	file = new File("fileio/History.txt");
+	
+	Writer= new fileWriter(file,true); //creating the object of writer
+	Writer.write(s+"\r"+"\n")//\r amd \n concat and make a new line
+	writer.flush();//to acknowledge compiler that we have finished writting
+	writer.close();// for closing file and saving it
+	catch(IOException ioe)
